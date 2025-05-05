@@ -1,0 +1,35 @@
+.root {
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  overflow: hidden;
+}
+
+a {
+ color: black;
+  text-decoration: none;
+}
+
+ul, li, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid #0F172A;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}

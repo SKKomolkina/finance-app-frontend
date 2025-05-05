@@ -1,0 +1,28 @@
+.button {
+  padding: 8px 12px;
+  background-color: #0F172A;
+  color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.form {
+  font-size: 14px;
+}
+
+.input {
+
+}
+
+.buttonGray {
+  composes: button;
+  background-color: rgba(191, 192, 193, 0.49);
+  color: #0F172A;
+  margin-right: auto;
+  margin-left: 2%;
+}

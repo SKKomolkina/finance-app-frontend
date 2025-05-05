@@ -1,0 +1,133 @@
+.main {
+  width: 100%;
+  //overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.menu {
+  margin-top: 15%;
+  width: 76%;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: rgba(216, 215, 215, 0.07);
+  border: 1px solid rgba(216, 215, 215, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  -webkit-box-shadow: 9px 11px 6px -7px rgba(20, 20, 21, 0.19);
+  -moz-box-shadow: 9px 11px 6px -7px rgba(20, 20, 21, 0.19);
+  box-shadow: 9px 11px 6px -7px rgba(20, 20, 21, 0.19);
+}
+
+.title {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+.table {
+  margin-top: 24px;
+  width: 100%;
+  border: 1px solid rgba(216, 215, 215, 0.81);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.item {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 10% 20% auto 20% 10%;
+  border-bottom: 1px solid rgba(216, 215, 215, 0.81);
+
+  position: relative;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.itemText {
+  font-size: 14px;
+}
+
+.itemTextSpan {
+  composes: itemText;
+  color: #64748B;
+}
+
+.checkbox {
+  justify-self: center;
+}
+
+.editPopup {
+  width: 168px;
+  position: absolute;
+  right: 62px;
+  bottom: -148px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #ffffff;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  z-index: 1;
+}
+
+.openButton {
+  //position: relative;
+  //z-index: 1;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:active {
+    border: 1px solid #0F172A;
+    border-radius: 6px;
+  }
+}
+
+.profileWrapper {
+  width: 40%;
+  margin-right: auto;
+  margin-left: 5%;
+
+  margin-top: 15%;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: rgba(216, 215, 215, 0.07);
+  border: 1px solid rgba(216, 215, 215, 0.2);
+  color: #0F172A;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  -webkit-box-shadow: 9px 11px 6px -7px rgba(20, 20, 21, 0.19);
+  -moz-box-shadow: 9px 11px 6px -7px rgba(20, 20, 21, 0.19);
+  box-shadow: 9px 11px 6px -7px rgba(20, 20, 21, 0.19);
+}
+

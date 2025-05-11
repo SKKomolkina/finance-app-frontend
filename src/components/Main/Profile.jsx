@@ -43,32 +43,32 @@ const Profile = ({user}) => {
                         Электронная почта
                         <input className={!isEditing ? formStyles.input : formStyles.inputActive} disabled={!isEditing}
                                type="text" name="email"
-                               value={formData.email}
-                               placeholder={formData.email}/>
+                               value={user.email}
+                               placeholder={user.email}/>
                     </label>
 
                     <label className={formStyles.label}>
                         Имя
                         <input className={!isEditing ? formStyles.input : formStyles.inputActive} disabled={!isEditing}
                                type="text" name="name"
-                               value={formData.name}
-                               placeholder={formData.name}/>
+                               value={user.name}
+                               placeholder={user.name}/>
                     </label>
 
                     <label className={formStyles.label}>
                         ИНН
                         <input className={!isEditing ? formStyles.input : formStyles.inputActive} disabled={!isEditing}
                                type="text" name="inn"
-                               value={formData.inn}
-                               placeholder={formData.inn}/>
+                               value={user.tin}
+                               placeholder={user.tin}/>
                     </label>
 
                     <label className={formStyles.label}>
                         Телефон
                         <input className={!isEditing ? formStyles.input : formStyles.inputActive} disabled={!isEditing}
                                type="text" name="phone"
-                               value={formData.phone}
-                               placeholder={formData.phone}/>
+                               value={user.phoneNumber}
+                               placeholder={user.phoneNumber}/>
                     </label>
                 </form>
 

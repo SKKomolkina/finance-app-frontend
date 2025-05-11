@@ -1,7 +1,9 @@
 import styles from './styles.module.scss';
 import close from '../../images/close.svg';
+import {useEffect} from "react";
 
 const TransactionPopup = ({isOpen, setIsOpen}) => {
+
     return (
         <div className={styles.popup}>
             <h2 className={styles.title}>Транзакция</h2>

@@ -39,6 +39,7 @@ const users = [
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user, setUser] = useState({});
+    const [banks, setBanks] = useState([]);
 
     const id = 0;
 
@@ -46,13 +47,20 @@ function App() {
         api.getUser(id)
             .then((response) => {
                 setUser(response);
-                console.log({user});
+                console.log(response);
             })
             .catch((err) => console.log(err));
-    })
 
-    function registration(email, password, name, tin, phoneNumber) {
-        api.signIn(email, password, name, tin, phoneNumber)
+        api.getBanks()
+            .then((response) => {
+                setBanks(response);
+                console.log(response);
+            })
+            .catch((err) => console.log(err));
+    }, [])
+
+    function registration(email, password, name, tin, phoneNumber, accountNumber) {
+        api.signIn(email, password, name, tin, phoneNumber, accountNumber)
             .then(() => {
                 // setTimeout(history.push, 3000, "/");
             })
@@ -70,7 +78,7 @@ function App() {
                 />
                 <Route path={'/profile'} element={<Profile user={user}/>}
                 />
-                <Route path='/sign-in' element={<SignIn registration={registration}/> }/>
+                <Route path='/sign-in' element={<SignIn registration={registration}/>}/>
                 <Route path='/login' element={<Login/>}
                 />
             </Routes>

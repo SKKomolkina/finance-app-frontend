@@ -67,7 +67,7 @@ const SignIn = ({registration}) => {
                     Начните управлять своими финансами быстрее и эффективнее
                 </p>
 
-                <form className={styles.form}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                     <label className={styles.label}>
                         Электронная почта
                         <input onChange={handleChangeEmail} className={styles.input} value={emailValue} type="text"
@@ -108,10 +108,10 @@ const SignIn = ({registration}) => {
                     <label className={styles.label}>
                         Номер счета
                         <input onChange={handleChangeAccountNumber} className={styles.input} value={accountValue}
-                               type=" text" name="wallet" placeholder='как минимум 20 цифр'/>
+                               type="text" name="wallet" placeholder='как минимум 20 цифр'/>
                     </label>
 
-                    <button type={"submit"} className={buttonBlack.button}>Зарегистрироваться</button>
+                    <button type="submit" className={buttonBlack.button}>Зарегистрироваться</button>
                 </form>
 
                 <div className={styles.textWrapper}>

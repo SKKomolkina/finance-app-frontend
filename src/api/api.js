@@ -4,11 +4,11 @@ export class Api {
         this.headers = props.headers;
     }
 
-    signIn(email, password, name, phoneNumber, tin, accountNumber, bankId) {
+    signIn(email, password, name, phoneNumber, tin, accountNumber, bankId = 1, entityTypeId = 1) {
         return fetch(`${this._url}/register`, {
             method: 'POST',
             headers: this.headers,
-            body: JSON.stringify({email, password, name, phoneNumber, tin, accountNumber, bankId}),
+            body: JSON.stringify({email, password, name, phoneNumber, tin, entityTypeId}),
         })
             .then(res => this._checkResult(res))
     }
@@ -98,7 +98,7 @@ export class Api {
             .then(res => this._checkResult(res))
     }
 
-    updateCounterparties(entityTypeId, tin, name, phoneNumber, accountNumber, bankId) {
+    updateCounterparties(entityTypeId, tin, name, phoneNumber, accountNumber, bankId, id) {
         return fetch(`${this._url}/user/counterparties${id}`, {
             method: 'PATCH',
             headers: this.headers,
@@ -166,6 +166,14 @@ export class Api {
     deleteTransaction(id) {
         return fetch(`${this._url}/user/transactions/${id}`, {
             method: 'DELETE',
+            headers: this.headers,
+        })
+        .then(res => this._checkResult(res))
+    }
+
+    getBanks() {
+        return fetch(`${this._url}/banks`, {
+            method: 'GET',
             headers: this.headers,
         })
         .then(res => this._checkResult(res))
